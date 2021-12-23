@@ -105,7 +105,7 @@ export default class Notes {
 		let notesElement = slide.querySelectorAll( 'aside.notes' );
 		if( notesElement ) {
 			let notes = ""
-			for (let i = 0; i < notesElement.length(); ++i) {
+			for (let i = 0; i < notesElement.length; ++i) {
 				notes += notesElement[i].innerHTML + "\n";
 			}
 			return notes;
