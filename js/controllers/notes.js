@@ -1,5 +1,5 @@
 /**
- * Handles the showing and 
+ * Handles the showing of speaker notes
  */
 export default class Notes {
 
@@ -89,7 +89,7 @@ export default class Notes {
 	 * Retrieves the speaker notes from a slide. Notes can be
 	 * defined in two ways:
 	 * 1. As a data-notes attribute on the slide <section>
-	 * 2. As an <aside class="notes"> inside of the slide
+	 * 2. With <aside class="notes"> elements inside slide
 	 *
 	 * @param {HTMLElement} [slide=currentSlide]
 	 * @return {(string|null)}
@@ -102,9 +102,13 @@ export default class Notes {
 		}
 
 		// ... or using an <aside class="notes"> element
-		let notesElement = slide.querySelector( 'aside.notes' );
+		let notesElement = slide.querySelectorAll( 'aside.notes' );
 		if( notesElement ) {
-			return notesElement.innerHTML;
+			let notes = ""
+			for (let i = 0; i < notesElement.length(); ++i) {
+				notes += notesElement[i].innerHTML + "\n";
+			}
+			return notes;
 		}
 
 		return null;
