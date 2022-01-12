@@ -656,19 +656,27 @@ div.ribbon-legalese a {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 
-code {
-  /* color: dimgrey; */
-  /* background: whitesmoke; */
-  /* background: #272822; */
-  /* color: #ddd; */
-  overflow-x: auto;
-  font-family: monospace;
-  background: rgb(233,196,199);
-  color: #981E32;
-  overflow-y: auto;
-}
+// .reveal .src {
+//   /* color: dimgrey; */
+//   // background: whitesmoke;
+//   // background: #272822;
+//   /* color: #ddd; */
+//   overflow-x: auto;
+//   font-family: monospace;
+//   // background: rgb(233,196,199);
+//   // background:
+//   // color: #981E32;
+//   overflow-y: auto;
+//   background: #282A36;
+// }
 
-.C++ code {
-  background: #272822;
-  color: #ddd;
+// .reveal .pre .src {
+//   background: whitesmoke;
+// };
+// .reveal code {
+//   color: #981E32;
+//   font-family: monospace;
+// }
 }
+// .reveal.code hljs {
+// };
